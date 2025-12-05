@@ -1,5 +1,50 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+@theme {
+  --color-primary-50: #fff5f0;
+  --color-primary-100: #ffe8dc;
+  --color-primary-200: #ffd1b9;
+  --color-primary-300: #ffb896;
+  --color-primary-400: #ff9e73;
+  --color-primary-500: #ff6b35;
+  --color-primary-600: #ff5722;
+  --color-primary-700: #e64a19;
+  --color-primary-800: #d84315;
+  --color-primary-900: #bf360c;
+
+  --color-secondary-50: #fce4ec;
+  --color-secondary-100: #f8bbd0;
+  --color-secondary-200: #f48fb1;
+  --color-secondary-300: #f06292;
+  --color-secondary-400: #ec407a;
+  --color-secondary-500: #e91e63;
+  --color-secondary-600: #d81b60;
+  --color-secondary-700: #c2185b;
+  --color-secondary-800: #ad1457;
+  --color-secondary-900: #880e4f;
+
+  --color-accent-50: #fffef5;
+  --color-accent-100: #fffde7;
+  --color-accent-200: #fff9c4;
+  --color-accent-300: #fff59d;
+  --color-accent-400: #fff176;
+  --color-accent-500: #ffd700;
+  --color-accent-600: #ffc107;
+  --color-accent-700: #ffb300;
+  --color-accent-800: #ffa000;
+  --color-accent-900: #ff8f00;
+
+  --color-dark-50: #e8e9f0;
+  --color-dark-100: #c8cad9;
+  --color-dark-200: #a5a8c2;
+  --color-dark-300: #8286ab;
+  --color-dark-400: #686d9a;
+  --color-dark-500: #4e5489;
+  --color-dark-600: #474d81;
+  --color-dark-700: #3d4376;
+  --color-dark-800: #353a6c;
+  --color-dark-900: #2d3142;
+}
 
 * {
   margin: 0;
@@ -18,12 +63,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
-  color: #1e293b;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Scrollbar Styling */

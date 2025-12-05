@@ -5,11 +5,7 @@ import { eventService, bookingService } from "../../services/apiService";
 import Card from "../../components/common/Card";
 import Button from "../../components/common/Button";
 import Loader from "../../components/common/Loader";
-import {
-  formatDate,
-  formatCurrency,
-  getEventStatus,
-} from "../../utils/helpers";
+import { formatDate, formatCurrency } from "../../utils/helpers";
 import { EVENT_STATUS } from "../../utils/constants";
 
 const OrganizerDashboard = () => {

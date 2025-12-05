@@ -27,6 +27,13 @@ import MyEventsPage from "./pages/organizer/MyEventsPage";
 import ValidateTicketsPage from "./pages/organizer/ValidateTicketsPage";
 import EventAnalyticsPage from "./pages/organizer/EventAnalyticsPage";
 
+// Admin Pages
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import EventApprovalPage from "./pages/admin/EventApprovalPage";
+import UserManagementPage from "./pages/admin/UserManagementPage";
+import PlatformAnalyticsPage from "./pages/admin/PlatformAnalyticsPage";
+import SystemSettingsPage from "./pages/admin/SystemSettingsPage";
+
 // Import USER_ROLES constant
 import { USER_ROLES } from "./utils/constants";
 
@@ -174,11 +181,51 @@ function App() {
             element={
               <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
                 <MainLayout>
-                  <div className="container-custom py-8">
-                    <h1 className="text-3xl font-bold">
-                      Admin Dashboard - Coming Soon
-                    </h1>
-                  </div>
+                  <AdminDashboard />
+                </MainLayout>
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin/events"
+            element={
+              <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
+                <MainLayout>
+                  <EventApprovalPage />
+                </MainLayout>
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin/users"
+            element={
+              <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
+                <MainLayout>
+                  <UserManagementPage />
+                </MainLayout>
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin/analytics"
+            element={
+              <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
+                <MainLayout>
+                  <PlatformAnalyticsPage />
+                </MainLayout>
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin/settings"
+            element={
+              <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]}>
+                <MainLayout>
+                  <SystemSettingsPage />
                 </MainLayout>
               </ProtectedRoute>
             }

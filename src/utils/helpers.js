@@ -38,6 +38,13 @@ export const formatDate = (date, format = "long") => {
 };
 
 /**
+ * Format time only (alias for formatDate with time format)
+ */
+export const formatTime = (date) => {
+  return formatDate(date, "time");
+};
+
+/**
  * Format currency
  */
 export const formatCurrency = (amount, currency = "LKR") => {
@@ -93,6 +100,33 @@ export const isToday = (eventDate) => {
 export const isValidEmail = (email) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
+};
+
+/**
+ * Validate email (alias for compatibility)
+ */
+export const validateEmail = (email) => {
+  return isValidEmail(email);
+};
+
+/**
+ * Validate required field
+ */
+export const validateRequired = (value) => {
+  if (typeof value === "string") {
+    return value.trim().length > 0;
+  }
+  return value !== null && value !== undefined && value !== "";
+};
+
+/**
+ * Validate number
+ */
+export const validateNumber = (value) => {
+  if (value === "" || value === null || value === undefined) {
+    return false;
+  }
+  return !isNaN(parseFloat(value)) && isFinite(value);
 };
 
 /**
